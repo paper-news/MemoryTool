@@ -16,9 +16,9 @@
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
+#include <QtWidgets/QTableWidget>
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QWidget>
-#include <qcustomplot.h>
 
 QT_BEGIN_NAMESPACE
 
@@ -26,7 +26,7 @@ class Ui_MemoryToolClass
 {
 public:
     QWidget *centralWidget;
-    QCustomPlot *customplot;
+    QTableWidget *tasklist_tableWidget;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
 
@@ -37,9 +37,9 @@ public:
         MemoryToolClass->resize(1087, 828);
         centralWidget = new QWidget(MemoryToolClass);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
-        customplot = new QCustomPlot(centralWidget);
-        customplot->setObjectName(QStringLiteral("customplot"));
-        customplot->setGeometry(QRect(150, 120, 831, 581));
+        tasklist_tableWidget = new QTableWidget(centralWidget);
+        tasklist_tableWidget->setObjectName(QStringLiteral("tasklist_tableWidget"));
+        tasklist_tableWidget->setGeometry(QRect(0, 0, 921, 801));
         MemoryToolClass->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MemoryToolClass);
         menuBar->setObjectName(QStringLiteral("menuBar"));

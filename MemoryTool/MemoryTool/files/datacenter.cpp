@@ -8,9 +8,11 @@ namespace DataCenter_
 	DataCenter::~DataCenter(){
 	}
 
-	void DataCenter::startUp(void)
+	bool DataCenter::startUp(void)
 	{
-		return;
+		bool ret = false;
+
+		return ret;
 	}
 
 	bool DataCenter::getProcessUsedMemory(DWORD nProcessID_, int nUsedMemoryCounters_)

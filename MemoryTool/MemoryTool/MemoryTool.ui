@@ -14,13 +14,13 @@
    <string>MemoryTool</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QCustomPlot" name="customplot" native="true">
+   <widget class="QTableWidget" name="tasklist_tableWidget">
     <property name="geometry">
      <rect>
-      <x>150</x>
-      <y>120</y>
-      <width>831</width>
-      <height>581</height>
+      <x>0</x>
+      <y>0</y>
+      <width>921</width>
+      <height>801</height>
      </rect>
     </property>
    </widget>
@@ -45,14 +45,6 @@
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <customwidgets>
-  <customwidget>
-   <class>QCustomPlot</class>
-   <extends>QWidget</extends>
-   <header location="global">qcustomplot.h</header>
-   <container>1</container>
-  </customwidget>
- </customwidgets>
  <resources>
   <include location="MemoryTool.qrc"/>
  </resources>

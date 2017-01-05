@@ -89,5 +89,8 @@
     <ClInclude Include="files\datacenter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="files\pubDef.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

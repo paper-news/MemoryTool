@@ -28,9 +28,11 @@ namespace DataCenter_
 		函数说明: 数据中心初始化操作
 		函数参数:
 			param:NULL
-		返回值: NULL
+		返回值: 
+			成功:true
+			失败:false
 		*/
-		void startUp(void);
+		bool startUp(void);
 
 		/*
 		函数名称: getProcessUsedMemory

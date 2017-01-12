@@ -10,7 +10,7 @@ namespace DataCenter_
 
 	bool DataCenter::startUp(void)
 	{
-		bool ret = false;
+		bool ret = true;
 
 		return ret;
 	}

@@ -14,6 +14,7 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QTableWidget>
@@ -27,6 +28,7 @@ class Ui_MemoryToolClass
 public:
     QWidget *centralWidget;
     QTableWidget *tasklist_tableWidget;
+    QLabel *titile_label;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
 
@@ -35,11 +37,31 @@ public:
         if (MemoryToolClass->objectName().isEmpty())
             MemoryToolClass->setObjectName(QStringLiteral("MemoryToolClass"));
         MemoryToolClass->resize(1087, 828);
+        MemoryToolClass->setDocumentMode(false);
         centralWidget = new QWidget(MemoryToolClass);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         tasklist_tableWidget = new QTableWidget(centralWidget);
+        if (tasklist_tableWidget->columnCount() < 1)
+            tasklist_tableWidget->setColumnCount(1);
+        if (tasklist_tableWidget->rowCount() < 1)
+            tasklist_tableWidget->setRowCount(1);
         tasklist_tableWidget->setObjectName(QStringLiteral("tasklist_tableWidget"));
-        tasklist_tableWidget->setGeometry(QRect(0, 0, 921, 801));
+        tasklist_tableWidget->setGeometry(QRect(0, 30, 1081, 761));
+        tasklist_tableWidget->setMidLineWidth(0);
+        tasklist_tableWidget->setDragDropOverwriteMode(false);
+        tasklist_tableWidget->setSelectionMode(QAbstractItemView::SingleSelection);
+        tasklist_tableWidget->setVerticalScrollMode(QAbstractItemView::ScrollPerPixel);
+        tasklist_tableWidget->setHorizontalScrollMode(QAbstractItemView::ScrollPerPixel);
+        tasklist_tableWidget->setShowGrid(false);
+        tasklist_tableWidget->setGridStyle(Qt::DashDotLine);
+        tasklist_tableWidget->setRowCount(1);
+        tasklist_tableWidget->setColumnCount(1);
+        tasklist_tableWidget->horizontalHeader()->setHighlightSections(false);
+        tasklist_tableWidget->horizontalHeader()->setProperty("showSortIndicator", QVariant(false));
+        tasklist_tableWidget->verticalHeader()->setVisible(false);
+        titile_label = new QLabel(centralWidget);
+        titile_label->setObjectName(QStringLiteral("titile_label"));
+        titile_label->setGeometry(QRect(10, 1, 591, 21));
         MemoryToolClass->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MemoryToolClass);
         menuBar->setObjectName(QStringLiteral("menuBar"));
@@ -57,6 +79,7 @@ public:
     void retranslateUi(QMainWindow *MemoryToolClass)
     {
         MemoryToolClass->setWindowTitle(QApplication::translate("MemoryToolClass", "MemoryTool", 0));
+        titile_label->setText(QApplication::translate("MemoryToolClass", "TextLabel", 0));
     } // retranslateUi
 
 };
